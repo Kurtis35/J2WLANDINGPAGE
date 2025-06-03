@@ -48,7 +48,7 @@ const AboutSection = () => {
                 className="w-16 h-16 rounded-full object-cover mr-4"
               />
               <div>
-                <h4 className="font-bold">Jaun Witbooi</h4>
+                <h4 className="font-bold"> Jaun Witbooi </h4>
                 <p className="text-gray-500">Founder & CEO</p>
               </div>
             </div>
