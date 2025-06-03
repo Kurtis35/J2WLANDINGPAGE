@@ -33,8 +33,7 @@ const AboutSection = () => {
             <span className="text-indigo-600 font-medium">About J2W</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Why "Journey to Wealth" Exists</h2>
             <p className="text-gray-600 mb-6">
-              J2W was founded in 2018 with a simple mission: to help South African businesses grow through effective digital marketing strategies that deliver real results.
-            </p>
+             36|  J2W was founded in 2025 with a simple mission: to help South African businesses grow through effective digital marketing strategies that deliver real results.            </p>
             <p className="text-gray-600 mb-6">
               We noticed that many businesses were being underserved by agencies that promised the world but delivered little. At J2W, we believe in transparency, integrity, and measurable results.
             </p>
