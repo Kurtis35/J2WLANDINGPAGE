@@ -5,7 +5,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll event to change navbar style
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -18,6 +17,22 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+          top: offsetTop - 100,
+          behavior: 'smooth'
+        });
+        setIsOpen(false);
+      }
+    }
+  };
 
   return (
     <header
@@ -37,36 +52,42 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#services"
+              onClick={handleNavClick}
               className="text-sm font-medium hover:text-indigo-600 transition-colors"
             >
               Services
             </a>
             <a
               href="#why-choose-us"
+              onClick={handleNavClick}
               className="text-sm font-medium hover:text-indigo-600 transition-colors"
             >
               Why Choose Us
             </a>
             <a
               href="#portfolio"
+              onClick={handleNavClick}
               className="text-sm font-medium hover:text-indigo-600 transition-colors"
             >
               Portfolio
             </a>
             <a
               href="#pricing"
+              onClick={handleNavClick}
               className="text-sm font-medium hover:text-indigo-600 transition-colors"
             >
               Pricing
             </a>
             <a
               href="#about"
+              onClick={handleNavClick}
               className="text-sm font-medium hover:text-indigo-600 transition-colors"
             >
               About
             </a>
             <a
               href="#contact"
+              onClick={handleNavClick}
               className="bg-indigo-600 text-white px-5 py-2 rounded-md flex items-center text-sm font-medium hover:bg-indigo-700 transition-colors"
             >
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
@@ -95,43 +116,43 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 space-y-3">
             <a
               href="#services"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium hover:text-indigo-600"
-              onClick={() => setIsOpen(false)}
             >
               Services
             </a>
             <a
               href="#why-choose-us"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium hover:text-indigo-600"
-              onClick={() => setIsOpen(false)}
             >
               Why Choose Us
             </a>
             <a
               href="#portfolio"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium hover:text-indigo-600"
-              onClick={() => setIsOpen(false)}
             >
               Portfolio
             </a>
             <a
               href="#pricing"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium hover:text-indigo-600"
-              onClick={() => setIsOpen(false)}
             >
               Pricing
             </a>
             <a
               href="#about"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium hover:text-indigo-600"
-              onClick={() => setIsOpen(false)}
             >
               About
             </a>
             <a
               href="#contact"
+              onClick={handleNavClick}
               className="block py-2 text-base font-medium bg-indigo-600 text-white px-4 rounded-md hover:bg-indigo-700 transition-colors"
-              onClick={() => setIsOpen(false)}
             >
               Get Started
             </a>

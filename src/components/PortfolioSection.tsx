@@ -94,16 +94,6 @@ const PortfolioSection = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-          >
-            Discuss Your Project
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
-        </div>
       </div>
     </section>
   );
