@@ -49,7 +49,7 @@ const ContactSection = () => {
                   <Phone className="h-5 w-5 text-indigo-600 mr-4 mt-1" />
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <p className="text-gray-600">+27 (0)82 123 4567</p>
+                    <p className="text-gray-600">+27 76 035 5295</p>
                   </div>
                 </div>
                 <div className="flex items-start">

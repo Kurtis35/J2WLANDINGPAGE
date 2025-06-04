@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const projects = [
@@ -33,8 +33,6 @@ const projects = [
 ];
 
 const PortfolioSection = () => {
-  const [activeProject, setActiveProject] = useState(null);
-
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,13 +90,6 @@ const PortfolioSection = () => {
                     ))}
                   </ul>
                 </div>
-                <button
-                  onClick={() => setActiveProject(index)}
-                  className="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition-colors"
-                >
-                  View Case Study
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
               </div>
             </div>
           ))}

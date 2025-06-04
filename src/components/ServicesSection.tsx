@@ -36,7 +36,7 @@ const serviceItems = [
 
 const ServicesSection = () => {
   return (
-    <section id="services\" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">What We Do</h2>
@@ -55,27 +55,7 @@ const ServicesSection = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <a
-                href="#contact"
-                className="text-indigo-600 font-medium inline-flex items-center hover:text-indigo-800 transition-colors"
-              >
-                Learn more
-                <svg
-                  className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </a>
+              <p className="text-gray-600">{service.description}</p>
             </div>
           ))}
         </div>
