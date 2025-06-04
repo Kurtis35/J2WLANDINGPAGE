@@ -31,7 +31,7 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-indigo-600 font-medium">About J2W</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Why "Journey to Wealth" Exists</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">Why "J2W" Exists</h2>
             <p className="text-gray-600 mb-6">
               J2W was founded in 2025 with a simple mission: to help South African businesses grow through effective digital marketing strategies that deliver real results.            </p>
             <p className="text-gray-600 mb-6">
